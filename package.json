@@ -1,0 +1,27 @@
+{
+  "name": "session-heartbeat",
+  "version": "1.0.0",
+  "description": "A utility to detect when user is afk or session has expired",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1kkou/heartbeat.git"
+  },
+  "keywords": [
+    "session",
+    "afk",
+    "heartbeat",
+    "angular",
+    "interval",
+    "vanilla"
+  ],
+  "author": "Andrei Lazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n1kkou/heartbeat/issues"
+  },
+  "homepage": "https://github.com/n1kkou/heartbeat#readme"
+}

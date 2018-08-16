@@ -1,4 +1,4 @@
-exports.Heartbeat = function Heartbeat () {
+exports.SessionHeartbeat = function SessionHeartbeat () {
     /**
      * Generate a popup window
      * @param title {String} - The popup tile
