@@ -72,25 +72,28 @@ exports.SessionHeartbeat = function SessionHeartbeat () {
                 return;
             }
 
-// time accumulator in seconds
-            var timer = 0;
+// set a timer in the session
+            sessionStorage.setItem('heartbeat', '0');
 
 // reset timer on mouse move
             document.addEventListener('mousemove', function () {
-                timer = 0;
+                sessionStorage.setItem('heartbeat', '0');
             });
 
 // reset timer on keypress
             document.addEventListener('keypress', function () {
-                timer = 0;
+                sessionStorage.setItem('heartbeat', '0');
             });
 
             var interval = setInterval(function () {
-                if (timer >= idle) {
+                if (parseInt(sessionStorage.getItem('heartbeat'), 0) >= idle) {
                     _popup(popup.title, popup.message, popup.callback || '', popup.button);
+                    sessionStorage.removeItem('heartbeat');
                     clearInterval(interval);
                 } else {
+                    var timer = parseInt(sessionStorage.getItem('heartbeat'), 0);
                     timer += frequency;
+                    sessionStorage.setItem('heartbeat', timer);
                 }
             }, frequency * 1000);
         }
