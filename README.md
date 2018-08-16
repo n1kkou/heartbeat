@@ -4,31 +4,11 @@ You can also add a callback function to execute when used clicks the confirmatio
 ### Installation
 `npm install -S session-heartbeat`
 
-**app.module.ts**
-```ts
-...
-import * as {SessionHeartbeat} from 'session-heartbeat';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    ...
-    SessionHeartbeat
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-}
-```
-
 **app.component.ts**
 
 ```ts
 ...
-import * as {SessionHeartbeat} from 'session-heartbeat';
+import { SessionHeartbeat } from 'session-heartbeat';
 
 @Component({
   selector: 'my-app',
@@ -36,16 +16,15 @@ import * as {SessionHeartbeat} from 'session-heartbeat';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  constructor(public sessionHeartbeat: SessionHeartbeat) {
+  constructor() {
   }
   
   ngOnInit() {
     let heartbeat = new Heartbeat();
-    heartbeat.init(1, 600, {
+    heartbeat.init(1, 60, {
       'title': 'Popup title',
       'message': 'Popup details',
-      'button': 'Login',
-      'callback': somefunction
+      'button': 'Login'
     });
   }
 }
@@ -53,5 +32,5 @@ export class AppComponent  {
 
 **src/styles.scss**
 ```css
-@import "~session-heartbeat/heartbeat.css";
+@import "~session-heartbeat/session-heartbeat.css";
 ```
