@@ -20,7 +20,7 @@ export class AppComponent  {
   }
   
   ngOnInit() {
-    let heartbeat = new Heartbeat();
+    let heartbeat = new SessionHeartbeat();
     heartbeat.init(1, 60, {
       'title': 'Popup title',
       'message': 'Popup details',
