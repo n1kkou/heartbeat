@@ -1,5 +1,5 @@
-## heartbeat
-Display a popup window when user is AFK or session expired  
+Display a popup window when user is AFK or session expired. 
+You can also add a callback function to execute when used clicks the confirmation button.
 
 ### Install
 `npm install -S session-heartbeat`
