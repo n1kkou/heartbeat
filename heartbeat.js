@@ -16,12 +16,12 @@ document.addEventListener('keypress', function(){
 */
 function heartbeat(idleDuration){
 	var interval = setInterval(function(){
-  	if(timer >= idleDuration){
-    	alert("Your session expired!");
-      clearInterval(interval);
-    }else{
-    	timer += 1;  
-    }
+		if(timer >= idleDuration){
+			alert("Your session expired!");
+		  clearInterval(interval);
+		}else{
+			timer += 1;  
+		}
   }, 1000);
 }
 
