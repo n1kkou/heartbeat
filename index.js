@@ -47,7 +47,7 @@ exports.Heartbeat = function Heartbeat () {
     return {
         /**
          * Start counting the seconds user is AFK. Reset counter on keypress or mousemove
-         * @param frequency {number} - Interval frequency runtime (in seconds)
+         * @param frequency {number} - Interval frequency (in seconds)
          * @param idle {number} - Counter for time afk (in seconds)
          * @param popup {object} - The popup details: title, description and optional callback function
          */
@@ -90,7 +90,7 @@ exports.Heartbeat = function Heartbeat () {
                     _popup(popup.title, popup.message, popup.callback || '', popup.button);
                     clearInterval(interval);
                 } else {
-                    timer += 1;
+                    timer += frequency;
                 }
             }, frequency * 1000);
         }
