@@ -2,7 +2,7 @@
 Display a popup window when user is AFK or session expired  
 
 ### Install
-npm install -S session-heartbeat
+`npm install -S session-heartbeat`
 
 **your.module.ts**
 
