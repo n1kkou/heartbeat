@@ -16,7 +16,11 @@
     "heartbeat",
     "angular",
     "interval",
-    "vanilla"
+    "vanilla",
+    "angular2",
+    "angular4",
+    "angular5",
+    "angular6"
   ],
   "author": "Andrei Lazar",
   "license": "MIT",
